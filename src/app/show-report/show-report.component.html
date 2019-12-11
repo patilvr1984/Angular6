@@ -1,0 +1,48 @@
+<div class="items-wrapper__item items-wrapper__item-small items-wrapper__item--blue"
+     xmlns="http://www.w3.org/1999/html">
+  <h4 class="sample-title">Test Case Report</h4>
+  <igx-tabs>
+    <igx-tabs-group label="DEV 2">
+
+     <!-- <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadFile($event)" accept=".csv">-->
+      <div style="margin-top: 15px" >
+        <igx-grid #grid1 [data]="testReportsDev2" paging="true" perPage="100" height="700px" (onColumnResized)="onResize($event)" allowFiltering="true">
+          <igx-column header="Test Suite" field="testSuite" datatype="string" sortable="true" resizable="true" filterable="false"></igx-column>
+          <igx-column header="Test Case" field="testCase" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Step" field="testStep" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Step Status" field="stepStatus" datatype="string" sortable="true" resizable="true"></igx-column>
+        </igx-grid>
+      </div>
+    </igx-tabs-group>
+    <igx-tabs-group label="DEV 3">
+      <div style="margin-top: 15px">
+        <igx-grid #grid1 [data]="testReportsDev3" paging="true" perPage="100" height="700px" (onColumnResized)="onResize($event)">
+          <igx-column header="Test Suite" field="testSuite" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Case" field="testCase" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Step" field="testStep" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Step Status" field="stepStatus" datatype="string" sortable="true" resizable="true"></igx-column>
+        </igx-grid>
+      </div>
+    </igx-tabs-group>
+    <igx-tabs-group label="FAT 3">
+      <div style="margin-top: 15px">
+        <igx-grid #grid1 [data]="testReportsFat3" paging="true" perPage="100" height="700px" (onColumnResized)="onResize($event)" (click)="fetchReport('FAT3')">
+          <igx-column header="Test Suite" field="testSuite" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Case" field="testCase" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Step" field="testStep" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Step Status" field="stepStatus" datatype="string" sortable="true" resizable="true"></igx-column>
+        </igx-grid>
+      </div>
+    </igx-tabs-group>
+    <igx-tabs-group label="FAT 4">
+      <div style="margin-top: 15px">
+        <igx-grid #grid1 [data]="testReportsFat4" paging="true" perPage="100" height="700px" (onColumnResized)="onResize($event)" (click)="fetchReport('FAT4')">
+          <igx-column header="Test Suite" field="testSuite" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Case" field="testCase" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Test Step" field="testStep" datatype="string" sortable="true" resizable="true"></igx-column>
+          <igx-column header="Step Status" field="stepStatus" datatype="string" sortable="true" resizable="true"></igx-column>
+        </igx-grid>
+      </div>
+    </igx-tabs-group>
+  </igx-tabs>
+</div>
